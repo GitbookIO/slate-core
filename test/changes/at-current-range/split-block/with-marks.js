@@ -3,19 +3,18 @@
 import h from '../../../helpers/h'
 
 export default function(change) {
-  change.insertFragment(
-    <document>
-      <quote>fragment</quote>
-    </document>
-  )
+  change
+    .addMark('italic')
+    .splitBlock()
+    .insertText('cat is cute')
 }
 
 export const input = (
   <value>
     <document>
-      <paragraph>word</paragraph>
       <paragraph>
-        <cursor />another
+        <b>word</b>
+        <cursor />
       </paragraph>
     </document>
   </value>
@@ -24,9 +23,15 @@ export const input = (
 export const output = (
   <value>
     <document>
-      <paragraph>word</paragraph>
       <paragraph>
-        fragment<cursor />another
+        <b>word</b>
+        <cursor />
+      </paragraph>
+      <paragraph>
+        <i>
+          <b>cat is cute</b>
+        </i>
+        <cursor />
       </paragraph>
     </document>
   </value>

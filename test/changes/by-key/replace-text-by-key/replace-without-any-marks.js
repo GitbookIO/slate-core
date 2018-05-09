@@ -3,19 +3,15 @@
 import h from '../../../helpers/h'
 
 export default function(change) {
-  change.insertFragment(
-    <document>
-      <quote>fragment</quote>
-    </document>
-  )
+  const { anchorKey, anchorOffset } = change.value
+  change.replaceTextByKey(anchorKey, anchorOffset, 3, 'cat is cute')
 }
 
 export const input = (
   <value>
     <document>
-      <paragraph>word</paragraph>
       <paragraph>
-        <cursor />another
+        Meow, <cursor />word.
       </paragraph>
     </document>
   </value>
@@ -24,9 +20,8 @@ export const input = (
 export const output = (
   <value>
     <document>
-      <paragraph>word</paragraph>
       <paragraph>
-        fragment<cursor />another
+        Meow, cat is cute<cursor />d.
       </paragraph>
     </document>
   </value>
