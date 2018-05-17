@@ -4,6 +4,13 @@ This document maintains a list of changes to the `slate` package with each new v
 
 ---
 
+### `0.33.7-0`
+
+https://github.com/GitbookIO/slate/pull/5
+https://github.com/GitbookIO/slate/pull/6
+https://github.com/GitbookIO/slate/pull/7
+https://github.com/GitbookIO/slate/pull/8
+
 ### `0.33.5`
 
 * Fix replaceNodeByKey failing to normalize a node's parent https://github.com/GitbookIO/slate/pull/1
